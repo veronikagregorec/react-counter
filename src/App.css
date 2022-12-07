@@ -1,0 +1,72 @@
+:root{
+    --lightYellow: #fef4e6;
+    --darkPeach: #FC766AFF;
+    --darkPurple: #9B4A97FF;
+    --white: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--lightYellow) var(--darkPeach);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--darkPeach);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--lightYellow);
+    border: 3px solid var(--darkPeach);
+}
+
+body{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(45deg, var(--darkPeach), var(--darkPurple));
+}
+
+.App{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    background-size: cover,
+}
+
+.wrap{
+    border: 1px solid var(--lightYellow);
+    width: 400px;
+    height:200px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightYellow);
+    border-radius: 5px;
+}
+
+button{
+    width: 65px;
+    height: 40px;
+    margin: 0 5px 0 5px;
+    background-color: var(--darkPeach);
+    border-radius: 5px;
+    border: 1px solid var(--darkPeach);
+    font-size: 25px;
+    color: var(--white)
+}
+
+button:active{
+    background-color: var(--darkPurple);
+    border: 1px solid var(--darkPurple);
+}
+
+.flex {
+    margin-top: -50px;
+}
