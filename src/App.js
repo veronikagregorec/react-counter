@@ -9,8 +9,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="container">
+        <h1 className="text">Increment and decrement </h1>
+      </div>
       <div className="wrap">
-        <h1>Counter: {counter}</h1>
+        <h2>{counter}</h2>
         <div className="flex">
           <button onClick={() => dispatch(increment(7))}>+</button>
           <button onClick={() => dispatch(decrement())}>-</button>
