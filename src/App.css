@@ -3,52 +3,78 @@
     --darkPeach: #FC766AFF;
     --darkPurple: #9B4A97FF;
     --white: #fff;
+    --orange: #ff5e00;
+    --darkYellow: #fac985;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: var(--lightYellow) var(--darkPeach);
     font-family:Arial, Helvetica, sans-serif;
-}
-
-*::-webkit-scrollbar {
-    width: 12px;
-}
-
-*::-webkit-scrollbar-track {
-    background: var(--darkPeach);
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: var(--lightYellow);
-    border: 3px solid var(--darkPeach);
 }
 
 body{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-image: linear-gradient(45deg, var(--darkPeach), var(--darkPurple));
 }
 
 .App{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 20vh;
+    align-items: center;
     background-size: cover,
 }
 
+.container {
+    width: 100%;
+    min-height: 20vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightYellow);
+}
+
+.text {
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400%;
+    background-image: linear-gradient(70deg, var(--darkPurple) 15%, var(--darkYellow) 30%, var(--darkPeach) 50%, var(--darkPurple) 68.2%, var(--orange) 85%);
+    animation: move 5s ease infinite;
+}
+
+@keyframes move {
+    0%, 100% {
+        background-position: 200% 0%;
+    }
+
+    50% {
+        background-position: 0% 200%;
+    }
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+}
+
 .wrap{
-    border: 1px solid var(--lightYellow);
+    border: 1px solid var(--white);
     width: 400px;
     height:200px;
     display:grid;
     justify-content: center;
     align-items: center;
-    background-color: var(--lightYellow);
-    border-radius: 5px;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-top: 150px;
 }
 
 button{
@@ -69,4 +95,29 @@ button:active{
 
 .flex {
     margin-top: -50px;
+}
+
+@media screen and (max-width: 360px) {
+    .wrap {
+        width: 320px;
+        height: 200px;
+        margin-top: 100px;
+    }
+
+    .container {
+        min-height: 15vh;
+    }
+    
+    .text {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    button {
+        width: 55px;
+        height: 35px;
+    }
 }
