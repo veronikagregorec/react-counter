@@ -1,4 +1,4 @@
-# React Redux
+# React Counter
 
 Incremental and decremental counter using React with Redux.
 
